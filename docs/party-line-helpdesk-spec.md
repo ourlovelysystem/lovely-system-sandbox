@@ -73,11 +73,21 @@ locked-in decisions, until confirmed.
   conferencing as a bolt-on; Chime SDK's primitives (PSTN dial-in,
   multi-party audio, media capture) are a more native fit for "many
   people, one ongoing room."
-- **Amazon Transcribe, streaming mode**, for live transcription — feeding
-  both the keyword-trigger detection and, after the call, redaction and
-  analysis. Batch (post-call) transcription was named as a simpler
-  possible alpha fallback if streaming proves to be more than is needed
-  at first.
+- **Live transcription requires bridging into a Chime SDK Meeting —
+  corrected from an earlier wrong assumption.** This document originally
+  proposed live transcription as if it were a direct action on the SMA
+  call, parallel to `StartCallRecording`. Checked directly against AWS's
+  own documented list of supported SIP Media Application actions: there
+  is no such action. The actual path is `CreateMeeting` + `CreateAttendee`
+  (AWS SDK calls from the Lambda) to create a Chime SDK Meeting, then the
+  `JoinChimeMeeting` action to bridge the phone call's leg into it, then
+  `StartMeetingTranscription` (confirmed to exist, but for Meetings only)
+  on that meeting. This is a materially bigger step than the original
+  framework implied — the call becomes a participant in a second Chime
+  SDK resource, not just an SMA call with an extra action turned on.
+  Batch (post-call) transcription on the recorded S3 file remains a
+  simpler possible alpha fallback if this bridging step turns out to be
+  more than is needed at first.
 - **Transcribe's built-in PII redaction** for the redaction stage, rather
   than a separate post-processing tool — chosen because it produces a
   redacted transcript directly rather than requiring a second pass.
@@ -108,9 +118,10 @@ intelligence.
 ## Architecture sketch
 
 ```
-Continuous bridge (proposed: Chime SDK)
+Continuous bridge (proposed: Chime SDK, SIP Media Application)
   → recorded to S3
-  → streaming transcription (proposed: Transcribe, streaming mode)
+  → CreateMeeting + CreateAttendee → JoinChimeMeeting (bridges call into a
+    Chime SDK Meeting) → StartMeetingTranscription
       → keyword match → skill router → Lambda → Bedrock reasoning
           → Polly speaks the response into the bridge
       → post-call: PII redaction (proposed: Transcribe native redaction)
