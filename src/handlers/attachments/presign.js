@@ -32,8 +32,5 @@ exports.handler = async (event) => {
     { expiresIn: 300 }
   );
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ key, upload_url: uploadUrl, expires_in_seconds: 300 }),
-  };
+  return jsonResponse(200, { key, upload_url: uploadUrl, expires_in_seconds: 300 });
 };
