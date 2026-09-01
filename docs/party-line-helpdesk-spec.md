@@ -90,6 +90,21 @@ locked-in decisions, until confirmed.
 - **Amazon Polly** for speech synthesis, bringing the system's response in
   as a speaking participant on the Chime SDK bridge.
 
+## Alpha acceptance target
+
+Stated directly by the operator as the concrete proof-of-concept, deliberately
+smaller than the full framework:
+
+> "I am talking on the line. I am being recorded. I am being transcribed. I
+> am on a line that others can join. I speak a key phrase. Give me a drum
+> roll on that. I get a drum roll."
+
+This exercises the bridge, recording, live transcription, and keyword-trigger
+stages end to end, with the response deliberately simplified to a
+pre-recorded sound clip rather than full Bedrock reasoning and Polly speech
+— proving the pipeline's shape before building out the skill router's actual
+intelligence.
+
 ## Architecture sketch
 
 ```
