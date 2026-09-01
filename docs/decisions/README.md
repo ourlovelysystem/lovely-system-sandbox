@@ -8,14 +8,14 @@ something recorded in `logbook/`, and can link back to it.
 
 ## Filename
 
-`ADR-XXXX-short-title.md`, sequential, starting at `ADR-0001`.
+Not yet decided.
 
 ## Structure
 
 ```markdown
-# ADR-XXXX: <title>
+# <title>
 
-**Status:** proposed | accepted | superseded by ADR-XXXX
+**Status:** proposed | accepted | superseded by <link>
 **Date:** <date>
 
 ## Context
@@ -38,5 +38,6 @@ What this actually costs or risks going forward.
 ## Corrections
 
 Never edit a decision once it's accepted. If it changes, write a new
-ADR, set its `Status` to `superseded by ADR-XXXX`, and have the new
-one state what changed and why. The old one stays exactly as it was.
+decision record, set its `Status` to `superseded by <link to the new one>`,
+and have the new one state what changed and why. The old one stays
+exactly as it was.
