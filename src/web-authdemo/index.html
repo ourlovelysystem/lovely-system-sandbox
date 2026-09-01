@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>auth demo</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, system-ui, sans-serif; max-width: 640px; margin: 0 auto; padding: 2rem; line-height: 1.5; }
+  h1 { font-size: 1.4rem; }
+  button { padding: 0.6rem 1.2rem; font-size: 1rem; cursor: pointer; margin-right: 0.5rem; }
+  table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+  td, th { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid #8884; vertical-align: top; }
+  th { width: 30%; opacity: 0.7; font-weight: 600; }
+  code { word-break: break-all; }
+  .provider { display: inline-block; background: #8882; border-radius: 4px; padding: 0.1rem 0.6rem; font-size: 0.85rem; }
+  pre { background: #8881; padding: 1rem; border-radius: 6px; overflow-x: auto; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<h1>auth demo</h1>
+<div id="app">loading…</div>
+
+<script>
+const COGNITO_DOMAIN = "https://ourlovelysystem-867712763388.auth.us-east-1.amazoncognito.com";
+const CLIENT_ID = "596fabsjifb9jg6ibjcbpvhtc";
+const REDIRECT_URI = "https://main.d1qro6ew8rw857.amplifyapp.com/";
+const SCOPE = "openid email profile";
+
+const app = document.getElementById("app");
+
+// --- PKCE helpers ---
+function base64UrlEncode(bytes) {
+  let str = btoa(String.fromCharCode(...new Uint8Array(bytes)));
+  return str.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+function randomVerifier() {
+  const bytes = new Uint8Array(32);
+  crypto.getRandomValues(bytes);
+  return base64UrlEncode(bytes);
+}
+
+async function challengeFromVerifier(verifier) {
+  const data = new TextEncoder().encode(verifier);
+  const digest = await crypto.subtle.digest("SHA-256", data);
+  return base64UrlEncode(digest);
+}
+
+function decodeJwt(token) {
+  const payload = token.split(".")[1];
+  const json = atob(payload.replace(/-/g, "+").replace(/_/g, "/"));
+  return JSON.parse(decodeURIComponent(escape(json)));
+}
+
+// --- Auth flow ---
+async function startLogin() {
+  const verifier = randomVerifier();
+  sessionStorage.setItem("pkce_verifier", verifier);
+  const challenge = await challengeFromVerifier(verifier);
+
+  const url = new URL(COGNITO_DOMAIN + "/login");
+  url.searchParams.set("client_id", CLIENT_ID);
+  url.searchParams.set("response_type", "code");
+  url.searchParams.set("scope", SCOPE);
+  url.searchParams.set("redirect_uri", REDIRECT_URI);
+  url.searchParams.set("code_challenge", challenge);
+  url.searchParams.set("code_challenge_method", "S256");
+
+  window.location.href = url.toString();
+}
+
+async function exchangeCodeForTokens(code) {
+  const verifier = sessionStorage.getItem("pkce_verifier");
+  const body = new URLSearchParams({
+    grant_type: "authorization_code",
+    client_id: CLIENT_ID,
+    code,
+    redirect_uri: REDIRECT_URI,
+    code_verifier: verifier,
+  });
+
+  const res = await fetch(COGNITO_DOMAIN + "/oauth2/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body,
+  });
+
+  if (!res.ok) {
+    throw new Error(`token exchange failed: HTTP ${res.status} ${await res.text()}`);
+  }
+  return res.json();
+}
+
+function logout() {
+  sessionStorage.clear();
+  const url = new URL(COGNITO_DOMAIN + "/logout");
+  url.searchParams.set("client_id", CLIENT_ID);
+  url.searchParams.set("logout_uri", REDIRECT_URI);
+  window.location.href = url.toString();
+}
+
+function renderLoggedOut() {
+  app.innerHTML = `
+    <p>Not signed in.</p>
+    <button id="login-btn">Sign in</button>
+  `;
+  document.getElementById("login-btn").addEventListener("click", startLogin);
+}
+
+function renderLoggedIn(idClaims, tokens) {
+  const identity = JSON.parse(idClaims["identities"] || "[]")[0] || {};
+  const rows = Object.entries(idClaims)
+    .filter(([k]) => k !== "identities")
+    .map(([k, v]) => `<tr><th>${k}</th><td><code>${String(v)}</code></td></tr>`)
+    .join("");
+
+  app.innerHTML = `
+    <p>Signed in as <strong>${idClaims.email || idClaims.username || idClaims.sub}</strong>
+      ${identity.providerName ? `<span class="provider">${identity.providerName}</span>` : ""}
+    </p>
+    <button id="logout-btn">Sign out</button>
+    <h2>Who the system knows you as</h2>
+    <table>${rows}</table>
+    <h2>Raw ID token claims</h2>
+    <pre>${JSON.stringify(idClaims, null, 2)}</pre>
+    <h2>Session token summary</h2>
+    <pre>${JSON.stringify({
+      token_type: tokens.token_type,
+      expires_in: tokens.expires_in,
+      has_access_token: Boolean(tokens.access_token),
+      has_refresh_token: Boolean(tokens.refresh_token),
+    }, null, 2)}</pre>
+  `;
+  document.getElementById("logout-btn").addEventListener("click", logout);
+}
+
+async function init() {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("code");
+  const storedIdToken = sessionStorage.getItem("id_token");
+  const storedTokens = sessionStorage.getItem("tokens");
+
+  if (code) {
+    app.textContent = "completing sign-in…";
+    try {
+      const tokens = await exchangeCodeForTokens(code);
+      sessionStorage.setItem("id_token", tokens.id_token);
+      sessionStorage.setItem("tokens", JSON.stringify(tokens));
+      window.history.replaceState({}, "", REDIRECT_URI);
+      renderLoggedIn(decodeJwt(tokens.id_token), tokens);
+    } catch (err) {
+      app.innerHTML = `<p>Sign-in failed: ${err.message}</p>`;
+    }
+    return;
+  }
+
+  if (storedIdToken && storedTokens) {
+    renderLoggedIn(decodeJwt(storedIdToken), JSON.parse(storedTokens));
+    return;
+  }
+
+  renderLoggedOut();
+}
+
+init();
+</script>
+</body>
+</html>
