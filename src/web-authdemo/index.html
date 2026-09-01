@@ -109,8 +109,16 @@ function renderLoggedOut() {
   document.getElementById("login-btn").addEventListener("click", startLogin);
 }
 
+function parseIdentities(raw) {
+  if (!raw) return [];
+  if (typeof raw === "string") {
+    try { return JSON.parse(raw); } catch { return []; }
+  }
+  return Array.isArray(raw) ? raw : [];
+}
+
 function renderLoggedIn(idClaims, tokens) {
-  const identity = JSON.parse(idClaims["identities"] || "[]")[0] || {};
+  const identity = parseIdentities(idClaims["identities"])[0] || {};
   const rows = Object.entries(idClaims)
     .filter(([k]) => k !== "identities")
     .map(([k, v]) => `<tr><th>${k}</th><td><code>${String(v)}</code></td></tr>`)
