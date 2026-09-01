@@ -1,0 +1,215 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: lovely-system-sandbox - public journal (posts, comments, tags, attachments)
+
+Globals:
+  Function:
+    Runtime: nodejs24.x
+    Timeout: 10
+    MemorySize: 128
+    CodeUri: ../
+    Environment:
+      Variables:
+        POSTS_TABLE: !Ref PostsTable
+        POST_TAGS_TABLE: !Ref PostTagsTable
+        COMMENTS_TABLE: !Ref CommentsTable
+        ATTACHMENTS_BUCKET: !Ref AttachmentsBucket
+  Api:
+    Cors:
+      AllowMethods: "'GET,POST,OPTIONS'"
+      AllowHeaders: "'Content-Type'"
+      AllowOrigin: "'*'"
+
+Resources:
+  PostsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: lovely-system-sandbox-journal-posts
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: post_id
+          AttributeType: S
+        - AttributeName: feed_pk
+          AttributeType: S
+        - AttributeName: created_at
+          AttributeType: S
+        - AttributeName: author_handle
+          AttributeType: S
+        - AttributeName: has_attachment_flag
+          AttributeType: S
+      KeySchema:
+        - AttributeName: post_id
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: feed-index
+          KeySchema:
+            - AttributeName: feed_pk
+              KeyType: HASH
+            - AttributeName: created_at
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+        - IndexName: author-index
+          KeySchema:
+            - AttributeName: author_handle
+              KeyType: HASH
+            - AttributeName: created_at
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+        - IndexName: attachment-index
+          KeySchema:
+            - AttributeName: has_attachment_flag
+              KeyType: HASH
+            - AttributeName: created_at
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+
+  PostTagsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: lovely-system-sandbox-journal-post-tags
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: tag
+          AttributeType: S
+        - AttributeName: sort_key
+          AttributeType: S
+      KeySchema:
+        - AttributeName: tag
+          KeyType: HASH
+        - AttributeName: sort_key
+          KeyType: RANGE
+
+  CommentsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: lovely-system-sandbox-journal-comments
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: post_id
+          AttributeType: S
+        - AttributeName: comment_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: post_id
+          KeyType: HASH
+        - AttributeName: comment_id
+          KeyType: RANGE
+
+  AttachmentsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "lovely-system-sandbox-journal-attachments-${AWS::AccountId}"
+      CorsConfiguration:
+        CorsRules:
+          - AllowedMethods: [GET, PUT]
+            AllowedOrigins: ["*"]
+            AllowedHeaders: ["*"]
+
+  CreatePostFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/posts/create.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref PostsTable
+        - DynamoDBCrudPolicy:
+            TableName: !Ref PostTagsTable
+      Events:
+        Create:
+          Type: Api
+          Properties: { Path: "/posts", Method: post }
+
+  GetPostFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/posts/get.handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref PostsTable
+      Events:
+        Get:
+          Type: Api
+          Properties: { Path: "/posts/{post_id}", Method: get }
+
+  ListPostsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/posts/list.handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref PostsTable
+      Events:
+        List:
+          Type: Api
+          Properties: { Path: "/posts", Method: get }
+
+  ListPostsByTagFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/posts/list_by_tag.handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref PostTagsTable
+      Events:
+        ListByTag:
+          Type: Api
+          Properties: { Path: "/tags/{tag}", Method: get }
+
+  ListPostsByAuthorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/posts/list_by_author.handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref PostsTable
+      Events:
+        ListByAuthor:
+          Type: Api
+          Properties: { Path: "/authors/{author_handle}", Method: get }
+
+  CreateCommentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/comments/create.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CommentsTable
+        - DynamoDBReadPolicy:
+            TableName: !Ref PostsTable
+      Events:
+        Create:
+          Type: Api
+          Properties: { Path: "/posts/{post_id}/comments", Method: post }
+
+  ListCommentsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/comments/list.handler
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Ref CommentsTable
+      Events:
+        List:
+          Type: Api
+          Properties: { Path: "/posts/{post_id}/comments", Method: get }
+
+  PresignAttachmentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/attachments/presign.handler
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref AttachmentsBucket
+      Events:
+        Presign:
+          Type: Api
+          Properties: { Path: "/attachments/presign", Method: post }
+
+Outputs:
+  ApiUrl:
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+  AttachmentsBucketName:
+    Value: !Ref AttachmentsBucket
