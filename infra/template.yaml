@@ -208,8 +208,50 @@ Resources:
           Type: Api
           Properties: { Path: "/attachments/presign", Method: post }
 
+  PartyLineRecordingsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "lovely-system-sandbox-partyline-recordings-${AWS::AccountId}"
+
+  PartyLineRecordingsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref PartyLineRecordingsBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: voiceconnector.chime.amazonaws.com
+            Action: s3:PutObject
+            Resource: !Sub "${PartyLineRecordingsBucket.Arn}/*"
+            Condition:
+              StringEquals:
+                "aws:SourceAccount": !Ref "AWS::AccountId"
+
+  PartyLineSmaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/partyline/sma.handler
+      Timeout: 10
+      Environment:
+        Variables:
+          RECORDINGS_BUCKET: !Ref PartyLineRecordingsBucket
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref PartyLineRecordingsBucket
+
+  PartyLineSmaInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref PartyLineSmaFunction
+      Action: lambda:InvokeFunction
+      Principal: voiceconnector.chime.amazonaws.com
+
 Outputs:
   ApiUrl:
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+  PartyLineSmaFunctionArn:
+    Value: !GetAtt PartyLineSmaFunction.Arn
   AttachmentsBucketName:
     Value: !Ref AttachmentsBucket
