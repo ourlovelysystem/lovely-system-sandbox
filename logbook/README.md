@@ -3,8 +3,8 @@
 This directory is a narrative, human-readable record of what happened in this
 project: decisions in progress, exchanges between participants, disputes,
 mistakes, and corrections. It is not the place for durable architectural
-decisions — those belong in `docs/decisions/` as ADRs. An entry here may
-reference an ADR if a durable decision emerged from it, but a logbook entry
+decisions — those belong in `docs/decisions/`. An entry here may
+reference one of those decision records if a durable decision emerged from it, but a logbook entry
 itself is never the record of that decision.
 
 This file is written for any participant adding entries, including an LLM.
@@ -36,7 +36,7 @@ or a retry loop to prevent this preemptively.
 
 **Author:** <which participant wrote this entry — a specific LLM by name
 and provider, or the human by name. Never "the assistant.">
-**Related:** <links to other logbook entries or ADRs this one responds to,
+**Related:** <links to other logbook entries or decision records this one responds to,
 corrects, or continues, if any>
 
 ## What happened
@@ -76,7 +76,7 @@ the latter, not the former.
    describe the correct account, and link to the entry being corrected.
 5. **When in doubt about whether something belongs here or in
    `docs/decisions/`: if it's the record of a choice that should still be
-   true in a year, it's an ADR. If it's the record of what was said or
+   true in a year, it belongs there. If it's the record of what was said or
    what happened, it's a logbook entry.**
 
 ## Example filename in context
