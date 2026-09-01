@@ -4,10 +4,18 @@ const {
   CreateAttendeeCommand,
   StartMeetingTranscriptionCommand,
 } = require("@aws-sdk/client-chime-sdk-meetings");
+const {
+  ChimeSDKMediaPipelinesClient,
+  CreateMediaCapturePipelineCommand,
+} = require("@aws-sdk/client-chime-sdk-media-pipelines");
+const { PutCommand, GetCommand } = require("@aws-sdk/lib-dynamodb");
 const { randomUUID } = require("crypto");
+const { endCall, docClient, CALLS_TABLE } = require("./lib/end-call");
 
 const RECORDINGS_BUCKET = process.env.RECORDINGS_BUCKET;
+const CAPTURE_BUCKET = process.env.CAPTURE_BUCKET;
 const meetingsClient = new ChimeSDKMeetingsClient({});
+const mediaPipelinesClient = new ChimeSDKMediaPipelinesClient({});
 
 exports.handler = async (event) => {
   console.log("SMA event:", JSON.stringify(event));
@@ -67,6 +75,34 @@ exports.handler = async (event) => {
       })
     );
 
+    const pipeline = await mediaPipelinesClient.send(
+      new CreateMediaCapturePipelineCommand({
+        SourceType: "ChimeSdkMeeting",
+        SourceArn: meeting.Meeting.MeetingArn,
+        SinkType: "S3Bucket",
+        SinkArn: `arn:aws:s3:::${CAPTURE_BUCKET}`,
+        ChimeSdkMeetingConfiguration: {
+          ArtifactsConfiguration: {
+            Audio: { MuxType: "AudioOnly" },
+            Video: { State: "Disabled" },
+            Content: { State: "Disabled" },
+          },
+        },
+      })
+    );
+
+    await docClient.send(
+      new PutCommand({
+        TableName: CALLS_TABLE,
+        Item: {
+          call_id: callId,
+          meeting_id: meetingId,
+          pipeline_id: pipeline.MediaCapturePipeline.MediaPipelineId,
+          created_at: Date.now(),
+        },
+      })
+    );
+
     actions = [
       {
         Type: "JoinChimeMeeting",
@@ -96,6 +132,15 @@ exports.handler = async (event) => {
     );
     actions = [];
   } else if (invocationType === "HANGUP") {
+    const callId = event.ActionData.Parameters.CallId;
+    const record = await docClient.send(
+      new GetCommand({ TableName: CALLS_TABLE, Key: { call_id: callId } })
+    );
+
+    if (record.Item) {
+      await endCall(callId, record.Item);
+    }
+
     actions = [];
   }
 

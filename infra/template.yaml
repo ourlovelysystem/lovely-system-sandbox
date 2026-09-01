@@ -2,6 +2,16 @@ AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: lovely-system-sandbox - public journal (posts, comments, tags, attachments)
 
+Parameters:
+  PartyLineMaxMeetingHours:
+    Type: Number
+    Default: 4
+    Description: >
+      Development safety net. A scheduled sweep force-ends any party line
+      meeting older than this many hours, regardless of activity, to limit
+      cost exposure from a meeting that never gets torn down. Not a product
+      behavior — the concept is a continuous, indefinitely-lived bridge.
+
 Globals:
   Function:
     Runtime: nodejs24.x
@@ -229,6 +239,43 @@ Resources:
               StringEquals:
                 "aws:SourceAccount": !Ref "AWS::AccountId"
 
+  PartyLineCaptureBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "lovely-system-sandbox-partyline-capture-${AWS::AccountId}"
+
+  PartyLineCaptureBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref PartyLineCaptureBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: mediapipelines.chime.amazonaws.com
+            Action:
+              - s3:PutObject
+              - s3:PutObjectAcl
+            Resource: !Sub "${PartyLineCaptureBucket.Arn}/*"
+            Condition:
+              StringEquals:
+                "aws:SourceAccount": !Ref "AWS::AccountId"
+              ArnLike:
+                "aws:SourceArn": !Sub "arn:aws:chime:*:${AWS::AccountId}:*"
+
+  PartyLineCallsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: lovely-system-sandbox-partyline-calls
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: call_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: call_id
+          KeyType: HASH
+
   PartyLineSmaFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -237,9 +284,15 @@ Resources:
       Environment:
         Variables:
           RECORDINGS_BUCKET: !Ref PartyLineRecordingsBucket
+          CAPTURE_BUCKET: !Ref PartyLineCaptureBucket
+          CALLS_TABLE: !Ref PartyLineCallsTable
       Policies:
         - S3CrudPolicy:
             BucketName: !Ref PartyLineRecordingsBucket
+        - S3CrudPolicy:
+            BucketName: !Ref PartyLineCaptureBucket
+        - DynamoDBCrudPolicy:
+            TableName: !Ref PartyLineCallsTable
         - Statement:
             - Effect: Allow
               Action:
@@ -247,7 +300,45 @@ Resources:
                 - chime:CreateAttendee
                 - chime:StartMeetingTranscription
                 - chime:DeleteMeeting
+                - chime:CreateMediaCapturePipeline
+                - chime:DeleteMediaCapturePipeline
               Resource: "*"
+            - Effect: Allow
+              Action:
+                - s3:GetBucketPolicy
+              Resource: "*"
+
+  PartyLineSweepFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/partyline/sweep.handler
+      Timeout: 30
+      Environment:
+        Variables:
+          CALLS_TABLE: !Ref PartyLineCallsTable
+          MAX_MEETING_HOURS: !Ref PartyLineMaxMeetingHours
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref PartyLineCallsTable
+        - Statement:
+            - Effect: Allow
+              Action:
+                - chime:DeleteMeeting
+                - chime:DeleteMediaCapturePipeline
+              Resource: "*"
+      Events:
+        Sweep0000Utc:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 0 * * ? *)
+        Sweep0400Utc:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 4 * * ? *)
+        Sweep0800Utc:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 8 * * ? *)
 
   PartyLineSmaInvokePermission:
     Type: AWS::Lambda::Permission
