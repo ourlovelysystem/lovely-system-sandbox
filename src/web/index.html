@@ -193,22 +193,33 @@ document.getElementById("new-post-form").addEventListener("submit", async (e) =>
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ filename: file.name, content_type: file.type }),
       });
+      if (!presignRes.ok) {
+        throw new Error(`presign step failed: HTTP ${presignRes.status} ${await presignRes.text()}`);
+      }
       const { key, upload_url } = await presignRes.json();
-      await fetch(upload_url, { method: "PUT", headers: { "Content-Type": file.type }, body: file });
+
+      const uploadRes = await fetch(upload_url, { method: "PUT", headers: { "Content-Type": file.type }, body: file });
+      if (!uploadRes.ok) {
+        throw new Error(`S3 upload step failed: HTTP ${uploadRes.status} ${await uploadRes.text()}`);
+      }
       attachmentKeys = [key];
     }
 
     status.textContent = "posting…";
-    await fetch(`${API}/posts`, {
+    const postRes = await fetch(`${API}/posts`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ author_handle: author, title, body, tags, attachment_keys: attachmentKeys }),
     });
+    if (!postRes.ok) {
+      throw new Error(`create post step failed: HTTP ${postRes.status} ${await postRes.text()}`);
+    }
 
     status.textContent = "";
     e.target.reset();
     renderFeed();
   } catch (err) {
+    console.error("post submission failed:", err);
     status.textContent = "failed: " + err.message;
   }
 });
