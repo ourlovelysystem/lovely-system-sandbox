@@ -1,4 +1,13 @@
+const {
+  ChimeSDKMeetingsClient,
+  CreateMeetingCommand,
+  CreateAttendeeCommand,
+  StartMeetingTranscriptionCommand,
+} = require("@aws-sdk/client-chime-sdk-meetings");
+const { randomUUID } = require("crypto");
+
 const RECORDINGS_BUCKET = process.env.RECORDINGS_BUCKET;
+const meetingsClient = new ChimeSDKMeetingsClient({});
 
 exports.handler = async (event) => {
   console.log("SMA event:", JSON.stringify(event));
@@ -36,6 +45,56 @@ exports.handler = async (event) => {
         },
       },
     ];
+  } else if (
+    invocationType === "ACTION_SUCCESSFUL" &&
+    event.ActionData &&
+    event.ActionData.Type === "Speak"
+  ) {
+    const callId = event.ActionData.Parameters.CallId;
+    const meeting = await meetingsClient.send(
+      new CreateMeetingCommand({
+        ClientRequestToken: randomUUID(),
+        MediaRegion: "us-east-1",
+        ExternalMeetingId: `partyline-${Date.now()}`,
+      })
+    );
+    const meetingId = meeting.Meeting.MeetingId;
+
+    const attendee = await meetingsClient.send(
+      new CreateAttendeeCommand({
+        MeetingId: meetingId,
+        ExternalUserId: `caller-${randomUUID()}`,
+      })
+    );
+
+    actions = [
+      {
+        Type: "JoinChimeMeeting",
+        Parameters: {
+          JoinToken: attendee.Attendee.JoinToken,
+          CallId: callId,
+          MeetingId: meetingId,
+        },
+      },
+    ];
+  } else if (
+    invocationType === "ACTION_SUCCESSFUL" &&
+    event.ActionData &&
+    event.ActionData.Type === "JoinChimeMeeting"
+  ) {
+    const meetingId = event.ActionData.Parameters.MeetingId;
+    await meetingsClient.send(
+      new StartMeetingTranscriptionCommand({
+        MeetingId: meetingId,
+        TranscriptionConfiguration: {
+          EngineTranscribeSettings: {
+            LanguageCode: "en-US",
+            Region: "us-east-1",
+          },
+        },
+      })
+    );
+    actions = [];
   } else if (invocationType === "HANGUP") {
     actions = [];
   }
