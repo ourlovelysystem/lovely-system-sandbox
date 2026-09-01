@@ -121,12 +121,35 @@ intelligence.
 Continuous bridge (proposed: Chime SDK, SIP Media Application)
   → recorded to S3
   → CreateMeeting + CreateAttendee → JoinChimeMeeting (bridges call into a
-    Chime SDK Meeting) → StartMeetingTranscription
+    Chime SDK Meeting) → StartMeetingTranscription (confirmed via
+    CloudTrail: the start request succeeds)
+      → transcript CONTENT delivery — see correction below, not yet built
       → keyword match → skill router → Lambda → Bedrock reasoning
           → Polly speaks the response into the bridge
       → post-call: PII redaction (proposed: Transcribe native redaction)
           → Bedrock computational analysis
 ```
+
+**Second correction to an earlier wrong assumption.** The framework
+initially assumed transcript content would arrive via EventBridge, the
+same way transcription start/stop status does. Checked directly: that's
+wrong. Live transcript content — the actual words — is delivered as
+real-time data messages sent directly to connected meeting *participants*,
+via the Chime SDK client library's `subscribeToTranscriptEvent` method.
+That's a client-side API (browser JS, mobile, or native SDK), meant for
+something actually joined into the meeting as an attendee — not a Lambda
+subscribing to an AWS event bus, which is everything built in this
+project so far. EventBridge/SNS only carries the transcription start/stop
+status, confirmed separately, not the words themselves.
+
+Practically, receiving the transcript requires a different kind of
+component than anything built to date: a "bot" participant that joins the
+Chime SDK Meeting using the client SDK (not server-side AWS API calls),
+subscribes to `transcriptEvent`, and relays what it receives elsewhere —
+DynamoDB, a keyword-matching Lambda, wherever. This is a genuinely
+different technical shape from the Lambda-calls-AWS-API pattern used for
+every other piece of this project, and is not yet built or designed in
+detail.
 
 One reasoning layer (Bedrock) serves two different invocation paths: live,
 triggered by a spoken keyword during the call, and after-the-fact, run
@@ -205,6 +228,11 @@ rather than getting ready-made WAV files from the API.
 - Which of the four recording-continuity options (see above) to build,
   and whether that decision should wait for the multi-party audio
   question to be resolved first.
+- How to actually build the "bot" meeting participant needed to receive
+  transcript content (see the second correction above). Not yet designed
+  — options include a headless/server-side use of the Chime SDK client
+  library, or an AWS-published sample pattern for this if one exists and
+  has been verified, rather than building it from scratch unchecked.
 - Whether Chime SDK vs. Connect, and the specific AWS services named
   under "Proposed, not yet confirmed," should be locked in as written or
   revisited.
