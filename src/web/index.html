@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>journal</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 1.5rem; line-height: 1.5; }
+  h1 { font-size: 1.4rem; }
+  .search-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  .search-row input { flex: 1; min-width: 120px; padding: 0.4rem; }
+  .search-row button { padding: 0.4rem 0.8rem; }
+  form.new-post { border: 1px solid #8884; border-radius: 8px; padding: 1rem; margin-bottom: 2rem; }
+  form.new-post input, form.new-post textarea { width: 100%; box-sizing: border-box; padding: 0.5rem; margin-bottom: 0.5rem; }
+  form.new-post textarea { min-height: 100px; }
+  form.new-post button { padding: 0.5rem 1rem; }
+  .post { border-bottom: 1px solid #8884; padding: 1rem 0; }
+  .post h2 { margin-bottom: 0.2rem; }
+  .meta { font-size: 0.85rem; opacity: 0.7; margin-bottom: 0.5rem; }
+  .tags span { display: inline-block; background: #8882; border-radius: 4px; padding: 0.1rem 0.5rem; margin-right: 0.3rem; font-size: 0.8rem; cursor: pointer; }
+  .comments { margin-top: 0.75rem; padding-left: 1rem; border-left: 2px solid #8882; }
+  .comment { font-size: 0.9rem; margin-bottom: 0.4rem; }
+  .comment-form { display: flex; gap: 0.4rem; margin-top: 0.5rem; }
+  .comment-form input { flex: 1; padding: 0.3rem; }
+  .attachments img { max-width: 100%; border-radius: 6px; margin-top: 0.5rem; display: block; }
+  #status { font-size: 0.85rem; opacity: 0.7; }
+</style>
+</head>
+<body>
+
+<h1>journal</h1>
+
+<div class="search-row">
+  <input id="search-tag" placeholder="search by tag">
+  <input id="search-author" placeholder="search by author">
+  <label><input type="checkbox" id="search-attachment"> has attachment</label>
+  <button id="search-btn">search</button>
+  <button id="clear-btn">clear</button>
+</div>
+
+<form class="new-post" id="new-post-form">
+  <input id="np-author" placeholder="your handle" required>
+  <input id="np-title" placeholder="title" required>
+  <textarea id="np-body" placeholder="what happened" required></textarea>
+  <input id="np-tags" placeholder="tags, comma separated">
+  <input type="file" id="np-file" accept="image/*">
+  <button type="submit">post</button>
+  <span id="status"></span>
+</form>
+
+<div id="feed">loading…</div>
+
+<script>
+const API = "https://eb0qaldlkb.execute-api.us-east-1.amazonaws.com/Prod";
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+function isImageKey(key) {
+  return /\.(png|jpe?g|gif|webp)$/i.test(key);
+}
+
+async function fetchFeed() {
+  const tag = document.getElementById("search-tag").value.trim();
+  const author = document.getElementById("search-author").value.trim();
+  const attachmentOnly = document.getElementById("search-attachment").checked;
+
+  let url;
+  if (tag) url = `${API}/tags/${encodeURIComponent(tag)}`;
+  else if (author) url = `${API}/authors/${encodeURIComponent(author)}`;
+  else if (attachmentOnly) url = `${API}/posts?has_attachment=true`;
+  else url = `${API}/posts`;
+
+  const res = await fetch(url);
+  const data = await res.json();
+  return data.posts || [];
+}
+
+async function fetchComments(postId) {
+  const res = await fetch(`${API}/posts/${postId}/comments`);
+  const data = await res.json();
+  return data.comments || [];
+}
+
+async function renderFeed() {
+  const feedEl = document.getElementById("feed");
+  feedEl.textContent = "loading…";
+  let posts;
+  try {
+    posts = await fetchFeed();
+  } catch (err) {
+    feedEl.textContent = "Failed to load posts: " + err.message;
+    return;
+  }
+
+  if (posts.length === 0) {
+    feedEl.textContent = "No posts yet.";
+    return;
+  }
+
+  feedEl.innerHTML = "";
+  for (const post of posts) {
+    const el = document.createElement("div");
+    el.className = "post";
+    const tagsHtml = (post.tags || []).map(t => `<span data-tag="${esc(t)}">${esc(t)}</span>`).join("");
+    const attachmentsHtml = (post.attachment_keys || [])
+      .filter(isImageKey)
+      .map(k => `<img src="https://lovely-system-sandbox-journal-attachments-867712763388.s3.us-east-1.amazonaws.com/${encodeURIComponent(k)}">`)
+      .join("");
+
+    el.innerHTML = `
+      <h2>${esc(post.title)}</h2>
+      <div class="meta">by ${esc(post.author_handle)} — ${esc(new Date(post.created_at).toLocaleString())}</div>
+      <div>${esc(post.body)}</div>
+      <div class="attachments">${attachmentsHtml}</div>
+      <div class="tags">${tagsHtml}</div>
+      <div class="comments" id="comments-${post.post_id}">loading comments…</div>
+      <div class="comment-form">
+        <input placeholder="your handle" class="c-author">
+        <input placeholder="add a comment" class="c-body">
+        <button class="c-submit">reply</button>
+      </div>
+    `;
+
+    el.querySelectorAll(".tags span").forEach(span => {
+      span.addEventListener("click", () => {
+        document.getElementById("search-tag").value = span.dataset.tag;
+        document.getElementById("search-author").value = "";
+        document.getElementById("search-attachment").checked = false;
+        renderFeed();
+      });
+    });
+
+    const authorInput = el.querySelector(".c-author");
+    const bodyInput = el.querySelector(".c-body");
+    el.querySelector(".c-submit").addEventListener("click", async () => {
+      if (!authorInput.value.trim() || !bodyInput.value.trim()) return;
+      await fetch(`${API}/posts/${post.post_id}/comments`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ author_handle: authorInput.value.trim(), body: bodyInput.value.trim() }),
+      });
+      bodyInput.value = "";
+      loadComments(post.post_id);
+    });
+
+    feedEl.appendChild(el);
+    loadComments(post.post_id);
+  }
+}
+
+async function loadComments(postId) {
+  const el = document.getElementById(`comments-${postId}`);
+  if (!el) return;
+  try {
+    const comments = await fetchComments(postId);
+    el.innerHTML = comments.length
+      ? comments.map(c => `<div class="comment"><strong>${esc(c.author_handle)}:</strong> ${esc(c.body)}</div>`).join("")
+      : `<div class="comment" style="opacity:0.6">no comments yet</div>`;
+  } catch {
+    el.textContent = "failed to load comments";
+  }
+}
+
+document.getElementById("search-btn").addEventListener("click", renderFeed);
+document.getElementById("clear-btn").addEventListener("click", () => {
+  document.getElementById("search-tag").value = "";
+  document.getElementById("search-author").value = "";
+  document.getElementById("search-attachment").checked = false;
+  renderFeed();
+});
+
+document.getElementById("new-post-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const status = document.getElementById("status");
+  const author = document.getElementById("np-author").value.trim();
+  const title = document.getElementById("np-title").value.trim();
+  const body = document.getElementById("np-body").value.trim();
+  const tags = document.getElementById("np-tags").value.split(",").map(t => t.trim()).filter(Boolean);
+  const fileInput = document.getElementById("np-file");
+  const file = fileInput.files[0];
+
+  status.textContent = "posting…";
+  let attachmentKeys = [];
+
+  try {
+    if (file) {
+      status.textContent = "uploading attachment…";
+      const presignRes = await fetch(`${API}/attachments/presign`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ filename: file.name, content_type: file.type }),
+      });
+      const { key, upload_url } = await presignRes.json();
+      await fetch(upload_url, { method: "PUT", headers: { "Content-Type": file.type }, body: file });
+      attachmentKeys = [key];
+    }
+
+    status.textContent = "posting…";
+    await fetch(`${API}/posts`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ author_handle: author, title, body, tags, attachment_keys: attachmentKeys }),
+    });
+
+    status.textContent = "";
+    e.target.reset();
+    renderFeed();
+  } catch (err) {
+    status.textContent = "failed: " + err.message;
+  }
+});
+
+renderFeed();
+</script>
+</body>
+</html>
