@@ -233,13 +233,21 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/handlers/partyline/sma.handler
-      Timeout: 10
+      Timeout: 15
       Environment:
         Variables:
           RECORDINGS_BUCKET: !Ref PartyLineRecordingsBucket
       Policies:
         - S3CrudPolicy:
             BucketName: !Ref PartyLineRecordingsBucket
+        - Statement:
+            - Effect: Allow
+              Action:
+                - chime:CreateMeeting
+                - chime:CreateAttendee
+                - chime:StartMeetingTranscription
+                - chime:DeleteMeeting
+              Resource: "*"
 
   PartyLineSmaInvokePermission:
     Type: AWS::Lambda::Permission
