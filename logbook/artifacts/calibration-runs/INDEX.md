@@ -6,5 +6,4 @@ Check protocol version before comparing any two rows for drift — see
 
 | Date | Model | Model version | Protocol version | Results |
 |---|---|---|---|---|
-
-No runs recorded yet.
+| 2026-09-03 | OpenAI GPT-5.4 (Codex) | GPT-5.4 | v1.9 | [openai-gpt-5.4-codex-20260903](openai-gpt-5.4-codex-20260903/) |
