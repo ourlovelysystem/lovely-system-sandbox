@@ -1,0 +1,2610 @@
+{
+    "events": [
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436390727,
+            "message": "> kvsConsumer@1.0.0 start",
+            "ingestionTime": 1788436395259,
+            "eventId": "39883464253382582717192449002456062530533438907314929664"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436390727,
+            "message": "> node dist/index.js",
+            "ingestionTime": 1788436395259,
+            "eventId": "39883464253382582717192449002456062530533438907314929665"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807973,
+            "message": "EVENT: {",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558279313823300832817361840454139859254129065984"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807973,
+            "message": "  \"startFragmentNumber\": \"91343852333181432392682062681989059238686906630\",",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558279313823300832817361840454139859254129065985"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807973,
+            "message": "  \"meetingId\": \"295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713\",",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558279313823300832817361840454139859254129065986"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807973,
+            "message": "  \"attendeeId\": \"a293c44f-dc68-6f16-618c-924b867dcfde\",",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558279313823300832817361840454139859254129065987"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807973,
+            "message": "  \"callStreamingStartTime\": \"2026-09-03T12:00:05.442000Z\",",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558279313823300832817361840454139859254129065988"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807973,
+            "message": "  \"callerStreamArn\": \"arn:aws:kinesisvideo:us-east-1:867712763388:stream/ChimeMediaPipelines-AmazonChimeSDKMediaStreamsKinesisVideoStreamPoolResourceskinesisVideoPoolStream3D24F86F-5cccadd5-b93a-4121-9d50-99480fe9300c-75c92882-d99d-4fed-90f0-4d7d280c4749/1788392797962\"",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558279313823300832817361840454139859254129065989"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807973,
+            "message": "}",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558279313823300832817361840454139859254129065990"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807973,
+            "message": "Starting KVS Convert",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558279313823300832817361840454139859254129065991"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807974,
+            "message": "Initializing media stream client",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558301614568499363440503376172412507615635046408"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807975,
+            "message": "Fetching data endpoint: {",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558323915313697894063644911890685155977141026825"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807975,
+            "message": "  \"middlewareStack\": {},",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558323915313697894063644911890685155977141026826"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807975,
+            "message": "  \"input\": {",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558323915313697894063644911890685155977141026827"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807975,
+            "message": "    \"APIName\": \"GET_MEDIA\",",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558323915313697894063644911890685155977141026828"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807975,
+            "message": "    \"StreamARN\": \"arn:aws:kinesisvideo:us-east-1:867712763388:stream/ChimeMediaPipelines-AmazonChimeSDKMediaStreamsKinesisVideoStreamPoolResourceskinesisVideoPoolStream3D24F86F-5cccadd5-b93a-4121-9d50-99480fe9300c-75c92882-d99d-4fed-90f0-4d7d280c4749/1788392797962\"",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558323915313697894063644911890685155977141026829"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807975,
+            "message": "  }",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558323915313697894063644911890685155977141026830"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436807975,
+            "message": "}",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473558323915313697894063644911890685155977141026831"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "getDataCmd Response: {",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401360"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "  \"$metadata\": {",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401361"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "    \"httpStatusCode\": 200,",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401362"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "    \"requestId\": \"f4585dad-ab80-450a-8cfe-7d470a8c1b8a\",",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401363"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "    \"attempts\": 1,",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401364"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "    \"totalRetryDelay\": 0",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401365"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "  },",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401366"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "  \"DataEndpoint\": \"https://s-f10ab6ea.kinesisvideo.us-east-1.amazonaws.com\"",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401367"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808058,
+            "message": "}",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560174877165175935784392376507314969982137401368"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808059,
+            "message": "Setting up fragment selector",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560197177910374466407533912225587618343643381785"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808059,
+            "message": "FragmentSelector: {",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560197177910374466407533912225587618343643381786"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808059,
+            "message": "  \"StreamARN\": \"arn:aws:kinesisvideo:us-east-1:867712763388:stream/ChimeMediaPipelines-AmazonChimeSDKMediaStreamsKinesisVideoStreamPoolResourceskinesisVideoPoolStream3D24F86F-5cccadd5-b93a-4121-9d50-99480fe9300c-75c92882-d99d-4fed-90f0-4d7d280c4749/1788392797962\",",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560197177910374466407533912225587618343643381787"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808059,
+            "message": "  \"StartSelector\": {",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560197177910374466407533912225587618343643381788"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808059,
+            "message": "    \"StartSelectorType\": \"NOW\"",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560197177910374466407533912225587618343643381789"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808059,
+            "message": "  }",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560197177910374466407533912225587618343643381790"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808059,
+            "message": "}",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473560197177910374466407533912225587618343643381791"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808111,
+            "message": "Starting Transcribe",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473561356816660698058810893769575765333141954363424"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436808112,
+            "message": "Streaming and conversion to PCM completed",
+            "ingestionTime": 1788436810250,
+            "eventId": "39883473561379117405896589434035305294037981503460343841"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816169,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.3033,\"Content\":\"It's\",\"EndTime\":7.326,\"StartTime\":7.266,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"It's\"}],\"ChannelId\":\"ch_0\",\"EndTime\":8.506,\"IsPartial\":false,\"ResultId\":\"95932181-1085-4d4e-b40c-7fcda0cdc502\",\"StartTime\":7.256}]}",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473741056221470457820097476571354309167097301434368"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816219,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473742171258730384351254553357267941585172600455169"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816219,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473742171258730384351254553357267941585172600455170"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816219,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473742171258730384351254553357267941585172600455171"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816219,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473742171258730384351254553357267941585172600455172"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816219,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473742171258730384351254553357267941585172600455173"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816219,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473742171258730384351254553357267941585172600455174"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816219,
+            "message": "  }",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473742171258730384351254553357267941585172600455175"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816219,
+            "message": "}",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473742171258730384351254553357267941585172600455176"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816307,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473744133724307855046091008500475934640985126731785"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816307,
+            "message": "  body: `{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nIt's\"}]}],\"max_tokens\":4000}`,",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473744133724307855046091008500475934640985126731786"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816307,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473744133724307855046091008500475934640985126731787"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816307,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473744133724307855046091008500475934640985126731788"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816307,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473744133724307855046091008500475934640985126731789"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436816307,
+            "message": "}",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473744133724307855046091008500475934640985126731790"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819320,
+            "message": "Bedrock Text:  I notice your message appears to be incomplete - it just says \"It’s\" without the actual question.   Could you please provide the full question? Once you do, I’ll be happy to give you a concise answer in a few sentences.",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811325869591027813616455619631424154202645725199"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819321,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811348170336226344239597155349696802564151705616"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819321,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811348170336226344239597155349696802564151705617"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819321,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811348170336226344239597155349696802564151705618"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819321,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811348170336226344239597155349696802564151705619"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819321,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811348170336226344239597155349696802564151705620"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819321,
+            "message": "    \"Text\": \"I notice your message appears to be incomplete - it just says \\\"It’s\\\" without the actual question.   Could you please provide the full question? Once you do, I’ll be happy to give you a concise answer in a few sentences.\"",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811348170336226344239597155349696802564151705621"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819321,
+            "message": "  }",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811348170336226344239597155349696802564151705622"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819321,
+            "message": "}",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473811348170336226344239597155349696802564151705623"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819402,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.6056,\"Content\":\"What's\",\"EndTime\":9.056,\"StartTime\":8.516,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.3035,\"Content\":\"the\",\"EndTime\":9.066,\"StartTime\":9.056,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"What's the\"}],\"ChannelId\":\"ch_0\",\"EndTime\":9.946,\"IsPartial\":false,\"ResultId\":\"f2bc1e24-341a-4f01-b92a-f53d0fb0f249\",\"StartTime\":8.506}]}",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813154530697307324714061548529781319846136119320"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819407,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813266034423299977829769227121144561653666021401"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819407,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813266034423299977829769227121144561653666021402"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819407,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813266034423299977829769227121144561653666021403"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819407,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813266034423299977829769227121144561653666021404"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819407,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813266034423299977829769227121144561653666021405"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819407,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813266034423299977829769227121144561653666021406"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819407,
+            "message": "  }",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813266034423299977829769227121144561653666021407"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819407,
+            "message": "}",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473813266034423299977829769227121144561653666021408"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819488,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473815072394784380958304233620301229078935650435105"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819488,
+            "message": "  body: `{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nWhat's the\"}]}],\"max_tokens\":4000}`,",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473815072394784380958304233620301229078935650435106"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819488,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473815072394784380958304233620301229078935650435107"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819488,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473815072394784380958304233620301229078935650435108"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819488,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473815072394784380958304233620301229078935650435109"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436819488,
+            "message": "}",
+            "ingestionTime": 1788436820249,
+            "eventId": "39883473815072394784380958304233620301229078935650435110"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "Bedrock Text:  I notice your question appears to be incomplete - it just says \"What’s the\" without finishing the thought.  Could you please complete your question? Once you provide the full details, I’ll be happy to give you a concise answer in a few sentences.",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462720"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462721"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462722"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462723"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462724"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462725"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "    \"Text\": \"I notice your question appears to be incomplete - it just says \\\"What’s the\\\" without finishing the thought.  Could you please complete your question? Once you provide the full details, I’ll be happy to give you a concise answer in a few sentences.\"",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462726"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "  }",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462727"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436820452,
+            "message": "}",
+            "ingestionTime": 1788436825229,
+            "eventId": "39883473836570313155764479018694677775136383171634462728"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838355,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.864,\"Content\":\"What's\",\"EndTime\":28.136,\"StartTime\":27.816,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9961,\"Content\":\"the\",\"EndTime\":28.266,\"StartTime\":28.136,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.6384,\"Content\":\"tallest\",\"EndTime\":28.696,\"StartTime\":28.266,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9884,\"Content\":\"mountain\",\"EndTime\":29.216,\"StartTime\":28.696,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9858,\"Content\":\"in\",\"EndTime\":29.456,\"StartTime\":29.216,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9964,\"Content\":\"South\",\"EndTime\":29.936,\"StartTime\":29.456,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9965,\"Content\":\"America\",\"EndTime\":30.396,\"StartTime\":29.936,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\".\",\"EndTime\":30.396,\"StartTime\":30.396,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"What's the tallest mountain in South America.\"}],\"ChannelId\":\"ch_0\",\"EndTime\":30.666,\"IsPartial\":false,\"ResultId\":\"9b24c96e-0682-4324-b1c2-d52f17d45c57\",\"StartTime\":27.806}]}",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235820554445058225139760353850193749005442940928"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838359,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235909757425852347632326496723284342451466862593"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838359,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235909757425852347632326496723284342451466862594"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838359,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235909757425852347632326496723284342451466862595"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838359,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235909757425852347632326496723284342451466862596"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838359,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235909757425852347632326496723284342451466862597"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838359,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235909757425852347632326496723284342451466862598"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838359,
+            "message": "  }",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235909757425852347632326496723284342451466862599"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838359,
+            "message": "}",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474235909757425852347632326496723284342451466862600"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838474,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474238474343123683369293603104324638904024654610441"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838474,
+            "message": "  body: `{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nWhat's the tallest mountain in South America.\"}]}],\"max_tokens\":4000}`,",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474238474343123683369293603104324638904024654610442"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838474,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474238474343123683369293603104324638904024654610443"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838474,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474238474343123683369293603104324638904024654610444"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838474,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474238474343123683369293603104324638904024654610445"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436838474,
+            "message": "}",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474238474343123683369293603104324638904024654610446"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "Bedrock Text:  # The Tallest Mountain in South America  The tallest mountain in South America is **Mount Aconcagua**, located in Argentina near the Chilean border. It stands at 22,838 feet (6,961 meters) above sea level. Aconcagua is part of the Andes mountain range and is the highest peak in the entire Western Hemisphere.",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151247"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151248"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151249"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151250"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151251"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151252"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "    \"Text\": \"# The Tallest Mountain in South America  The tallest mountain in South America is **Mount Aconcagua**, located in Argentina near the Chilean border. It stands at 22,838 feet (6,961 meters) above sea level. Aconcagua is part of the Andes mountain range and is the highest peak in the entire Western Hemisphere.\"",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151253"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "  }",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151254"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436839774,
+            "message": "}",
+            "ingestionTime": 1788436840244,
+            "eventId": "39883474267465311881773179377599538079081773982429151255"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870099,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9961,\"Content\":\"If\",\"EndTime\":58.206,\"StartTime\":58.056,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9969,\"Content\":\"I\",\"EndTime\":58.336,\"StartTime\":58.206,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.996,\"Content\":\"have\",\"EndTime\":58.526,\"StartTime\":58.336,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9927,\"Content\":\"3\",\"EndTime\":58.886,\"StartTime\":58.526,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.997,\"Content\":\"apples\",\"EndTime\":59.456,\"StartTime\":58.886,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9974,\"Content\":\"and\",\"EndTime\":59.616,\"StartTime\":59.456,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9974,\"Content\":\"eat\",\"EndTime\":59.856,\"StartTime\":59.616,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.991,\"Content\":\"1\",\"EndTime\":60.256,\"StartTime\":59.856,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\",\",\"EndTime\":60.256,\"StartTime\":60.256,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9974,\"Content\":\"then\",\"EndTime\":60.856,\"StartTime\":60.536,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9971,\"Content\":\"buy\",\"EndTime\":61.106,\"StartTime\":60.856,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9946,\"Content\":\"4\",\"EndTime\":61.616,\"StartTime\":61.106,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9993,\"Content\":\"more\",\"EndTime\":62.156,\"StartTime\":61.616,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\".\",\"EndTime\":62.156,\"StartTime\":62.156,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"If I have 3 apples and eat 1, then buy 4 more.\"}],\"ChannelId\":\"ch_0\",\"EndTime\":62.426,\"IsPartial\":false,\"ResultId\":\"de4ce1d7-67dd-47fe-bed8-649e76b03bb5\",\"StartTime\":58.046}]}",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943735410027214326180939332396145830328749457408"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870103,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943824613008008448673505475269236423774773379073"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870103,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943824613008008448673505475269236423774773379074"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870103,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943824613008008448673505475269236423774773379075"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870103,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943824613008008448673505475269236423774773379076"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870103,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943824613008008448673505475269236423774773379077"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870103,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943824613008008448673505475269236423774773379078"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870103,
+            "message": "  }",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943824613008008448673505475269236423774773379079"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870103,
+            "message": "}",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474943824613008008448673505475269236423774773379080"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870208,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474946166191253854164103366725687864501732901322761"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870208,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nIf I have 3 apples and eat 1, then buy 4 more.\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474946166191253854164103366725687864501732901322762"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870208,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474946166191253854164103366725687864501732901322763"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870208,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474946166191253854164103366725687864501732901322764"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870208,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474946166191253854164103366725687864501732901322765"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436870208,
+            "message": "}",
+            "ingestionTime": 1788436870245,
+            "eventId": "39883474946166191253854164103366725687864501732901322766"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "Bedrock Text:  # You would have 6 apples.  Here’s the breakdown. - Start with 3 apples - Eat 1 apple → 3 - 1 = 2 apples remaining - Buy 4 more apples → 2 + 4 = **6 apples total**",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504896"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504897"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504898"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504899"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504900"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504901"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "    \"Text\": \"# You would have 6 apples.  Here’s the breakdown. - Start with 3 apples - Eat 1 apple → 3 - 1 = 2 apples remaining - Buy 4 more apples → 2 + 4 = **6 apples total**\"",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504902"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "  }",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504903"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871581,
+            "message": "}",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474976785114411436709682724230501828385447543504904"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871666,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9872,\"Content\":\"How\",\"EndTime\":62.636,\"StartTime\":62.436,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9965,\"Content\":\"many\",\"EndTime\":63.196,\"StartTime\":62.636,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"How many\"}],\"ChannelId\":\"ch_0\",\"EndTime\":63.386,\"IsPartial\":false,\"ResultId\":\"1ca67b26-cec2-432e-8e7a-4d109a58f316\",\"StartTime\":62.426}]}",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978680677753311812649754766555003496175551840265"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871670,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978769880734105935142320909428094089621575761930"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871670,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978769880734105935142320909428094089621575761931"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871670,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978769880734105935142320909428094089621575761932"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871670,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978769880734105935142320909428094089621575761933"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871670,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978769880734105935142320909428094089621575761934"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871670,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978769880734105935142320909428094089621575761935"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871670,
+            "message": "  }",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978769880734105935142320909428094089621575761936"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871670,
+            "message": "}",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474978769880734105935142320909428094089621575761937"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871785,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474981334466431936956803597517029448651194763509778"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871785,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nHow many\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474981334466431936956803597517029448651194763509779"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871785,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474981334466431936956803597517029448651194763509780"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871785,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474981334466431936956803597517029448651194763509781"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871785,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474981334466431936956803597517029448651194763509782"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436871785,
+            "message": "}",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883474981334466431936956803597517029448651194763509783"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "Bedrock Text:  I’d be happy to help! However, your question appears to be incomplete. You’ve asked \"How many\" but didn’t specify what you’d like to know the quantity of.  Could you please provide the complete question? For example. - How many hours...? - How many people...? - How many items...?  Once you give me the full details, I’ll provide you with a clear answer.",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313688"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313689"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313690"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313691"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313692"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313693"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "    \"Text\": \"I’d be happy to help! However, your question appears to be incomplete. You’ve asked \\\"How many\\\" but didn’t specify what you’d like to know the quantity of.  Could you please provide the complete question? For example. - How many hours...? - How many people...? - How many items...?  Once you give me the full details, I’ll provide you with a clear answer.\"",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313694"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "  }",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313695"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436873429,
+            "message": "}",
+            "ingestionTime": 1788436875232,
+            "eventId": "39883475017996891538321301248282237869682557510595313696"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903492,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9971,\"Content\":\"If\",\"EndTime\":90.426,\"StartTime\":90.226,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9975,\"Content\":\"I\",\"EndTime\":90.586,\"StartTime\":90.426,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9963,\"Content\":\"have\",\"EndTime\":90.766,\"StartTime\":90.586,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.972,\"Content\":\"3\",\"EndTime\":91.066,\"StartTime\":90.766,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9974,\"Content\":\"apples\",\"EndTime\":91.526,\"StartTime\":91.066,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.994,\"Content\":\"and\",\"EndTime\":91.796,\"StartTime\":91.526,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.6422,\"Content\":\"each\",\"EndTime\":92.026,\"StartTime\":91.796,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.6098,\"Content\":\"1\",\"EndTime\":92.426,\"StartTime\":92.026,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\",\",\"EndTime\":92.426,\"StartTime\":92.426,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9186,\"Content\":\"then\",\"EndTime\":92.866,\"StartTime\":92.646,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9221,\"Content\":\"buy\",\"EndTime\":93.066,\"StartTime\":92.866,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9921,\"Content\":\"4\",\"EndTime\":93.506,\"StartTime\":93.066,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9972,\"Content\":\"more\",\"EndTime\":93.866,\"StartTime\":93.506,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\",\",\"EndTime\":93.866,\"StartTime\":93.866,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9299,\"Content\":\"how\",\"EndTime\":94.226,\"StartTime\":94.066,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9985,\"Content\":\"many\",\"EndTime\":94.506,\"StartTime\":94.226,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9978,\"Content\":\"do\",\"EndTime\":94.666,\"StartTime\":94.506,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9972,\"Content\":\"I\",\"EndTime\":94.826,\"StartTime\":94.666,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9993,\"Content\":\"have\",\"EndTime\":95.426,\"StartTime\":94.826,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\"?\",\"EndTime\":95.426,\"StartTime\":95.426,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"If I have 3 apples and each 1, then buy 4 more, how many do I have?\"}],\"ChannelId\":\"ch_0\",\"EndTime\":95.786,\"IsPartial\":false,\"ResultId\":\"c27bc22c-5f76-47f1-8dac-fd3f7929a299\",\"StartTime\":90.216}]}",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688424194441747424788555242707472358158529134592"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903496,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688513397422541547281121385580562951604553056257"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903496,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688513397422541547281121385580562951604553056258"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903496,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688513397422541547281121385580562951604553056259"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903496,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688513397422541547281121385580562951604553056260"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903496,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688513397422541547281121385580562951604553056261"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903496,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688513397422541547281121385580562951604553056262"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903496,
+            "message": "  }",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688513397422541547281121385580562951604553056263"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903496,
+            "message": "}",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475688513397422541547281121385580562951604553056264"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903579,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475690364359274019589001868850197192765609549430793"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903579,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nIf I have 3 apples and each 1, then buy 4 more, how many do I have?\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475690364359274019589001868850197192765609549430794"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903579,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475690364359274019589001868850197192765609549430795"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903579,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475690364359274019589001868850197192765609549430796"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903579,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475690364359274019589001868850197192765609549430797"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436903579,
+            "message": "}",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475690364359274019589001868850197192765609549430798"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "Bedrock Text:  If you start with 3 apples and buy 4 more, you have **7 apples total** (3 + 4 = 7).",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670543"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670544"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670545"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670546"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670547"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670548"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "    \"Text\": \"If you start with 3 apples and buy 4 more, you have **7 apples total** (3 + 4 = 7).\"",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670549"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "  }",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670550"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436904588,
+            "message": "}",
+            "ingestionTime": 1788436905246,
+            "eventId": "39883475712865811179336987751678389934294962369083670551"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919868,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9962,\"Content\":\"If\",\"EndTime\":106.866,\"StartTime\":106.706,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9971,\"Content\":\"I\",\"EndTime\":107.026,\"StartTime\":106.866,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9564,\"Content\":\"have\",\"EndTime\":107.246,\"StartTime\":107.026,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9678,\"Content\":\"3\",\"EndTime\":107.606,\"StartTime\":107.246,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9947,\"Content\":\"apples\",\"EndTime\":108.006,\"StartTime\":107.606,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9973,\"Content\":\"and\",\"EndTime\":108.306,\"StartTime\":108.006,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9976,\"Content\":\"eat\",\"EndTime\":108.536,\"StartTime\":108.306,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9917,\"Content\":\"1\",\"EndTime\":109.016,\"StartTime\":108.536,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\",\",\"EndTime\":109.016,\"StartTime\":109.016,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9971,\"Content\":\"then\",\"EndTime\":109.576,\"StartTime\":109.306,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9964,\"Content\":\"buy\",\"EndTime\":109.826,\"StartTime\":109.576,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9927,\"Content\":\"4\",\"EndTime\":110.226,\"StartTime\":109.826,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.999,\"Content\":\"more\",\"EndTime\":110.546,\"StartTime\":110.226,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\",\",\"EndTime\":110.546,\"StartTime\":110.546,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.7242,\"Content\":\"how\",\"EndTime\":110.896,\"StartTime\":110.706,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9987,\"Content\":\"many\",\"EndTime\":111.146,\"StartTime\":110.896,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9983,\"Content\":\"do\",\"EndTime\":111.306,\"StartTime\":111.146,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9976,\"Content\":\"I\",\"EndTime\":111.466,\"StartTime\":111.306,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9979,\"Content\":\"have\",\"EndTime\":111.986,\"StartTime\":111.466,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\"?\",\"EndTime\":111.986,\"StartTime\":111.986,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"If I have 3 apples and eat 1, then buy 4 more, how many do I have?\"}],\"ChannelId\":\"ch_0\",\"EndTime\":112.196,\"IsPartial\":false,\"ResultId\":\"de37c76c-883f-42f0-bfce-015f011c6603\",\"StartTime\":106.696}]}",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053621197812884909372575938953925296106721443840"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919871,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053688100048480501242000546108743241191239385089"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919871,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053688100048480501242000546108743241191239385090"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919871,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053688100048480501242000546108743241191239385091"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919871,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053688100048480501242000546108743241191239385092"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919871,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053688100048480501242000546108743241191239385093"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919871,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053688100048480501242000546108743241191239385094"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919871,
+            "message": "  }",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053688100048480501242000546108743241191239385095"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919871,
+            "message": "}",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476053688100048480501242000546108743241191239385096"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919961,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476055695167116348257324738760753281593726777622537"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919961,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nIf I have 3 apples and eat 1, then buy 4 more, how many do I have?\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476055695167116348257324738760753281593726777622538"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919961,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476055695167116348257324738760753281593726777622539"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919961,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476055695167116348257324738760753281593726777622540"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919961,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476055695167116348257324738760753281593726777622541"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436919961,
+            "message": "}",
+            "ingestionTime": 1788436920327,
+            "eventId": "39883476055695167116348257324738760753281593726777622542"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "Bedrock Text:  You would have 6 apples. Here’s how. you start with 3 apples, eat 1 (leaving you with 2), then buy 4 more apples (2 + 4 = 6).",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711744"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711745"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711746"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711747"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711748"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711749"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "    \"Text\": \"You would have 6 apples. Here’s how. you start with 3 apples, eat 1 (leaving you with 2), then buy 4 more apples (2 + 4 = 6).\"",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711750"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "  }",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711751"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436922761,
+            "message": "}",
+            "ingestionTime": 1788436925229,
+            "eventId": "39883476118137253672234002126964999493790085052119711752"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939231,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.8625,\"Content\":\"Explain\",\"EndTime\":128.616,\"StartTime\":128.056,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9987,\"Content\":\"how\",\"EndTime\":128.736,\"StartTime\":128.616,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9973,\"Content\":\"a\",\"EndTime\":128.936,\"StartTime\":128.736,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9958,\"Content\":\"rainbow\",\"EndTime\":129.576,\"StartTime\":128.936,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9893,\"Content\":\"forms\",\"EndTime\":130.136,\"StartTime\":129.576,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.997,\"Content\":\"in\",\"EndTime\":130.376,\"StartTime\":130.136,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9973,\"Content\":\"simple\",\"EndTime\":130.776,\"StartTime\":130.376,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9963,\"Content\":\"terms\",\"EndTime\":131.316,\"StartTime\":130.776,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\".\",\"EndTime\":131.316,\"StartTime\":131.316,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"Explain how a rainbow forms in simple terms.\"}],\"ChannelId\":\"ch_0\",\"EndTime\":131.546,\"IsPartial\":false,\"ResultId\":\"4f2d7195-410d-457e-84e8-501dbfb42e02\",\"StartTime\":128.046}]}",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485430527092033365286217594314744434380848824320"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939235,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485519730072827487778783737187835027826872745985"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939235,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485519730072827487778783737187835027826872745986"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939235,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485519730072827487778783737187835027826872745987"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939235,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485519730072827487778783737187835027826872745988"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939235,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485519730072827487778783737187835027826872745989"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939235,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485519730072827487778783737187835027826872745990"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939235,
+            "message": "  }",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485519730072827487778783737187835027826872745991"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939235,
+            "message": "}",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476485519730072827487778783737187835027826872745992"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939331,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476487660601611886427600371166142009270531446865929"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939331,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nExplain how a rainbow forms in simple terms.\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476487660601611886427600371166142009270531446865930"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939331,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476487660601611886427600371166142009270531446865931"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939331,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476487660601611886427600371166142009270531446865932"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939331,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476487660601611886427600371166142009270531446865933"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436939331,
+            "message": "}",
+            "ingestionTime": 1788436940250,
+            "eventId": "39883476487660601611886427600371166142009270531446865934"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "Bedrock Text:  # How a Rainbow Forms  A rainbow forms when sunlight passes through water droplets in the air, usually after rain. The sunlight bends as it enters each droplet, separates into different colors, bounces off the back of the droplet, and bends again as it exits. This bending process, called refraction, separates white sunlight into the spectrum of colors we see—red, orange, yellow, green, blue, indigo, and violet. You see a rainbow when the sun is behind you and water droplets are in front of you at the right angle.",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396864"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396865"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396866"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396867"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396868"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396869"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "    \"Text\": \"# How a Rainbow Forms  A rainbow forms when sunlight passes through water droplets in the air, usually after rain. The sunlight bends as it enters each droplet, separates into different colors, bounces off the back of the droplet, and bends again as it exits. This bending process, called refraction, separates white sunlight into the spectrum of colors we see—red, orange, yellow, green, blue, indigo, and violet. You see a rainbow when the sun is behind you and water droplets are in front of you at the right angle.\"",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396870"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "  }",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396871"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436941880,
+            "message": "}",
+            "ingestionTime": 1788436945230,
+            "eventId": "39883476544505201122940985994166114767111704439375396872"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979884,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9863,\"Content\":\"What's\",\"EndTime\":169.586,\"StartTime\":169.346,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9969,\"Content\":\"the\",\"EndTime\":169.706,\"StartTime\":169.586,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9977,\"Content\":\"difference\",\"EndTime\":170.216,\"StartTime\":169.706,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.998,\"Content\":\"between\",\"EndTime\":170.346,\"StartTime\":170.216,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9975,\"Content\":\"a\",\"EndTime\":170.426,\"StartTime\":170.346,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9982,\"Content\":\"virus\",\"EndTime\":170.856,\"StartTime\":170.426,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.999,\"Content\":\"and\",\"EndTime\":170.946,\"StartTime\":170.856,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9966,\"Content\":\"a\",\"EndTime\":170.986,\"StartTime\":170.946,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9942,\"Content\":\"bacteria\",\"EndTime\":171.906,\"StartTime\":170.986,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\"?\",\"EndTime\":171.906,\"StartTime\":171.906,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"What's the difference between a virus and a bacteria?\"}],\"ChannelId\":\"ch_0\",\"EndTime\":172.186,\"IsPartial\":false,\"ResultId\":\"590add50-4e48-48a3-986c-90de22896d81\",\"StartTime\":169.336}]}",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392022721647898787907420170608088499078625558528"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979888,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392111924628692910399986313481179092524649480193"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979888,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392111924628692910399986313481179092524649480194"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979888,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392111924628692910399986313481179092524649480195"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979888,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392111924628692910399986313481179092524649480196"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979888,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392111924628692910399986313481179092524649480197"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979888,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392111924628692910399986313481179092524649480198"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979888,
+            "message": "  }",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392111924628692910399986313481179092524649480199"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436979888,
+            "message": "}",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477392111924628692910399986313481179092524649480200"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436980062,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477395992254293237238826613528460619907426690072585"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436980062,
+            "message": "  body: `{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nWhat's the difference between a virus and a bacteria?\"}]}],\"max_tokens\":4000}`,",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477395992254293237238826613528460619907426690072586"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436980062,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477395992254293237238826613528460619907426690072587"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436980062,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477395992254293237238826613528460619907426690072588"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436980062,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477395992254293237238826613528460619907426690072589"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436980062,
+            "message": "}",
+            "ingestionTime": 1788436980245,
+            "eventId": "39883477395992254293237238826613528460619907426690072590"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "Bedrock Text:  # Virus vs. Bacteria  **Bacteria** are single-celled living organisms with their own DNA and the ability to reproduce independently. They can survive on their own and some are actually beneficial to us.  **Viruses** are much smaller and aren’t technically alive—they’re genetic material (DNA or RNA) wrapped in protein. They can only reproduce by invading cells and hijacking their machinery.  In practical terms. bacteria can often be treated with antibiotics, while viruses cannot, and viruses typically cause more acute illnesses that your immune system must fight off.",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908416"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908417"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908418"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908419"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908420"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908421"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "    \"Text\": \"# Virus vs. Bacteria  **Bacteria** are single-celled living organisms with their own DNA and the ability to reproduce independently. They can survive on their own and some are actually beneficial to us.  **Viruses** are much smaller and aren’t technically alive—they’re genetic material (DNA or RNA) wrapped in protein. They can only reproduce by invading cells and hijacking their machinery.  In practical terms. bacteria can often be treated with antibiotics, while viruses cannot, and viruses typically cause more acute illnesses that your immune system must fight off.\"",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908422"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "  }",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908423"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788436982254,
+            "message": "}",
+            "ingestionTime": 1788436985230,
+            "eventId": "39883477444875487768416364758886028903988071335326908424"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023480,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9666,\"Content\":\"Give\",\"EndTime\":213.506,\"StartTime\":213.266,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.996,\"Content\":\"me\",\"EndTime\":213.666,\"StartTime\":213.506,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.997,\"Content\":\"one\",\"EndTime\":213.906,\"StartTime\":213.666,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9967,\"Content\":\"good\",\"EndTime\":214.066,\"StartTime\":213.906,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9963,\"Content\":\"reason\",\"EndTime\":214.386,\"StartTime\":214.066,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9963,\"Content\":\"to\",\"EndTime\":214.546,\"StartTime\":214.386,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9968,\"Content\":\"visit\",\"EndTime\":214.846,\"StartTime\":214.546,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9847,\"Content\":\"Portugal\",\"EndTime\":215.506,\"StartTime\":214.846,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\".\",\"EndTime\":215.506,\"StartTime\":215.506,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"Give me one good reason to visit Portugal.\"}],\"ChannelId\":\"ch_0\",\"EndTime\":215.786,\"IsPartial\":false,\"ResultId\":\"6e5ee3e8-5291-4331-af83-11320869ecf6\",\"StartTime\":213.256}]}",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364246009323039834440217694544263299573532721152"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023485,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364357513049032487555925373135626541381062623233"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023485,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364357513049032487555925373135626541381062623234"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023485,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364357513049032487555925373135626541381062623235"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023485,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364357513049032487555925373135626541381062623236"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023485,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364357513049032487555925373135626541381062623237"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023485,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364357513049032487555925373135626541381062623238"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023485,
+            "message": "  }",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364357513049032487555925373135626541381062623239"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023485,
+            "message": "}",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478364357513049032487555925373135626541381062623240"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023563,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478366096971174517876160965159160893113578529095689"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023563,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nGive me one good reason to visit Portugal.\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478366096971174517876160965159160893113578529095690"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023563,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478366096971174517876160965159160893113578529095691"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023563,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478366096971174517876160965159160893113578529095692"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023563,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478366096971174517876160965159160893113578529095693"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437023563,
+            "message": "}",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478366096971174517876160965159160893113578529095694"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "Bedrock Text:  # One Great Reason to Visit Portugal  Portugal offers an incredible combination of history, culture, and natural beauty all in one compact country. You can wander through historic Lisbon’s charming neighborhoods, taste world-class wines in the Douro Valley, relax on stunning Algarve beaches, and explore medieval towns—all within a short distance of each other. Plus, it’s remarkably affordable compared to other Western European destinations, making it excellent value for travelers.",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760079"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760080"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760081"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760082"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760083"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760084"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "    \"Text\": \"# One Great Reason to Visit Portugal  Portugal offers an incredible combination of history, culture, and natural beauty all in one compact country. You can wander through historic Lisbon’s charming neighborhoods, taste world-class wines in the Douro Valley, relax on stunning Algarve beaches, and explore medieval towns—all within a short distance of each other. Plus, it’s remarkably affordable compared to other Western European destinations, making it excellent value for travelers.\"",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760085"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "  }",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760086"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437025112,
+            "message": "}",
+            "ingestionTime": 1788437025249,
+            "eventId": "39883478400640825487041811407203986765225425551292760087"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059431,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9919,\"Content\":\"What's\",\"EndTime\":250.066,\"StartTime\":249.826,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9996,\"Content\":\"the\",\"EndTime\":250.226,\"StartTime\":250.066,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9997,\"Content\":\"capital\",\"EndTime\":250.506,\"StartTime\":250.226,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9996,\"Content\":\"of\",\"EndTime\":250.746,\"StartTime\":250.506,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9996,\"Content\":\"France\",\"EndTime\":251.086,\"StartTime\":250.746,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\"?\",\"EndTime\":251.086,\"StartTime\":251.086,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"What's the capital of France?\"}],\"ChannelId\":\"ch_0\",\"EndTime\":251.786,\"IsPartial\":false,\"ResultId\":\"c03cbb56-33eb-4d2d-af74-f7585f15a1df\",\"StartTime\":249.816}]}",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479165980099955414267043881616484836807066659782656"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059435,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479166069302936208389536447759357927400512683704321"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059435,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479166069302936208389536447759357927400512683704322"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059435,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479166069302936208389536447759357927400512683704323"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059435,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479166069302936208389536447759357927400512683704324"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059435,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479166069302936208389536447759357927400512683704325"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059435,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479166069302936208389536447759357927400512683704326"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059435,
+            "message": "  }",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479166069302936208389536447759357927400512683704327"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059435,
+            "message": "}",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479166069302936208389536447759357927400512683704328"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059545,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479168522384908046758082016688367918720278341550089"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059545,
+            "message": "  body: `{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nWhat's the capital of France?\"}]}],\"max_tokens\":4000}`,",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479168522384908046758082016688367918720278341550090"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059545,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479168522384908046758082016688367918720278341550091"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059545,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479168522384908046758082016688367918720278341550092"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059545,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479168522384908046758082016688367918720278341550093"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437059545,
+            "message": "}",
+            "ingestionTime": 1788437060250,
+            "eventId": "39883479168522384908046758082016688367918720278341550094"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "Bedrock Text:  The capital of France is Paris. Located in the north-central part of the country along the Seine River, Paris is not only France’s largest city but also its political, cultural, and economic center. It’s known worldwide for iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656832"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656833"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656834"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656835"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656836"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656837"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "    \"Text\": \"The capital of France is Paris. Located in the north-central part of the country along the Seine River, Paris is not only France’s largest city but also its political, cultural, and economic center. It’s known worldwide for iconic landmarks like the Eiffel Tower, Notre-Dame Cathedral, and the Louvre Museum.\"",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656838"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "  }",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656839"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437060431,
+            "message": "}",
+            "ingestionTime": 1788437065230,
+            "eventId": "39883479188280845153944890191438214061897554628577656840"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084603,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.47,\"Content\":\"For\",\"EndTime\":274.976,\"StartTime\":274.746,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9145,\"Content\":\"the\",\"EndTime\":275.686,\"StartTime\":274.976,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9984,\"Content\":\"population\",\"EndTime\":275.776,\"StartTime\":275.686,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9988,\"Content\":\"of\",\"EndTime\":275.896,\"StartTime\":275.776,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9978,\"Content\":\"that\",\"EndTime\":276.176,\"StartTime\":275.896,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9992,\"Content\":\"city\",\"EndTime\":276.636,\"StartTime\":276.176,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\".\",\"EndTime\":276.636,\"StartTime\":276.636,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"For the population of that city.\"}],\"ChannelId\":\"ch_0\",\"EndTime\":276.916,\"IsPartial\":false,\"ResultId\":\"11c0b965-cf3f-4025-9cb0-e17fa827e96e\",\"StartTime\":274.686}]}",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727334458092827112792837396965654443674323517440"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084608,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727445961818819765908545075557017685481853419521"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084608,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727445961818819765908545075557017685481853419522"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084608,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727445961818819765908545075557017685481853419523"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084608,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727445961818819765908545075557017685481853419524"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084608,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727445961818819765908545075557017685481853419525"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084608,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727445961818819765908545075557017685481853419526"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084608,
+            "message": "  }",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727445961818819765908545075557017685481853419527"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084608,
+            "message": "}",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479727445961818819765908545075557017685481853419528"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084726,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479730077449752246379439246290313190192139559108617"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084726,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nFor the population of that city.\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479730077449752246379439246290313190192139559108618"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084726,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479730077449752246379439246290313190192139559108619"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084726,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479730077449752246379439246290313190192139559108620"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084726,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479730077449752246379439246290313190192139559108621"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437084726,
+            "message": "}",
+            "ingestionTime": 1788437085246,
+            "eventId": "39883479730077449752246379439246290313190192139559108622"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "Bedrock Text:  I’d be happy to help, but I notice your question seems incomplete. You’ve written \"For the population of that city\" but haven’t specified which city you’re asking about.  Could you please clarify. - **Which city** are you asking about? - **What specific information** do you need regarding its population? (current population, historical data, growth rate, demographics, etc.)  Once you provide these details, I’ll be able to give you a helpful answer.",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317184"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317185"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317186"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317187"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317188"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317189"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "    \"Text\": \"I’d be happy to help, but I notice your question seems incomplete. You’ve written \\\"For the population of that city\\\" but haven’t specified which city you’re asking about.  Could you please clarify. - **Which city** are you asking about? - **What specific information** do you need regarding its population? (current population, historical data, growth rate, demographics, etc.)  Once you provide these details, I’ll be able to give you a helpful answer.\"",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317190"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "  }",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317191"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437085906,
+            "message": "}",
+            "ingestionTime": 1788437090237,
+            "eventId": "39883479756392329086512514752292164311013185950852317192"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117397,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9896,\"Content\":\"Name\",\"EndTime\":307.896,\"StartTime\":307.456,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.974,\"Content\":\"three\",\"EndTime\":308.176,\"StartTime\":307.896,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9958,\"Content\":\"primary\",\"EndTime\":308.856,\"StartTime\":308.176,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9949,\"Content\":\"colors\",\"EndTime\":309.506,\"StartTime\":308.856,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\".\",\"EndTime\":309.506,\"StartTime\":309.506,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"Name three primary colors.\"}],\"ChannelId\":\"ch_0\",\"EndTime\":309.716,\"IsPartial\":false,\"ResultId\":\"954f54cf-cf0e-4239-a3d9-b274304a986d\",\"StartTime\":307.406}]}",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458665096133440368138666960894735189941300297728"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117402,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458776599859433021254374639486098431748830199809"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117402,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458776599859433021254374639486098431748830199810"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117402,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458776599859433021254374639486098431748830199811"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117402,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458776599859433021254374639486098431748830199812"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117402,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458776599859433021254374639486098431748830199813"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117402,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458776599859433021254374639486098431748830199814"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117402,
+            "message": "  }",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458776599859433021254374639486098431748830199815"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117402,
+            "message": "}",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480458776599859433021254374639486098431748830199816"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117494,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480460828268417697838583395925567182081007380398089"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117494,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nName three primary colors.\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480460828268417697838583395925567182081007380398090"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117494,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480460828268417697838583395925567182081007380398091"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117494,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480460828268417697838583395925567182081007380398092"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117494,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480460828268417697838583395925567182081007380398093"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437117494,
+            "message": "}",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480460828268417697838583395925567182081007380398094"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "Bedrock Text:  The three primary colors are **red**, **blue**, and **yellow**. These are considered primary because they cannot be created by mixing other colors together, and all other colors can theoretically be made by combining these three in different proportions.",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733327"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733328"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733329"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733330"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733331"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733332"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "    \"Text\": \"The three primary colors are **red**, **blue**, and **yellow**. These are considered primary because they cannot be created by mixing other colors together, and all other colors can theoretically be made by combining these three in different proportions.\"",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733333"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "  }",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733334"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437118396,
+            "message": "}",
+            "ingestionTime": 1788437120242,
+            "eventId": "39883480480943540586772460657061143449110903085774733335"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138045,
+            "message": "NonPartial Event:  {\"Results\":[{\"Alternatives\":[{\"Items\":[{\"Confidence\":0.9981,\"Content\":\"Thank\",\"EndTime\":329.336,\"StartTime\":329.176,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9987,\"Content\":\"you\",\"EndTime\":329.496,\"StartTime\":329.336,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Confidence\":0.9661,\"Content\":\"goodbye\",\"EndTime\":330.136,\"StartTime\":329.496,\"Type\":\"pronunciation\",\"VocabularyFilterMatch\":false},{\"Content\":\".\",\"EndTime\":330.136,\"StartTime\":330.136,\"Type\":\"punctuation\",\"VocabularyFilterMatch\":false}],\"Transcript\":\"Thank you goodbye.\"}],\"ChannelId\":\"ch_0\",\"EndTime\":330.366,\"IsPartial\":false,\"ResultId\":\"f944e256-3571-45f5-8cc7-55c32ad7ce2d\",\"StartTime\":329.166}]}",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919130882992700674789276710576725241318282690560"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138048,
+            "message": "Retrieved meeting info for meetingId: 295c0ce9-2abd-4b7e-ae5a-9b6dfe0e2713",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919197785228296266658701317731543186402800631809"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138048,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919197785228296266658701317731543186402800631810"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138048,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919197785228296266658701317731543186402800631811"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138048,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919197785228296266658701317731543186402800631812"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138048,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919197785228296266658701317731543186402800631813"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138048,
+            "message": "    \"Function\": \"Thinking\"",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919197785228296266658701317731543186402800631814"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138048,
+            "message": "  }",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919197785228296266658701317731543186402800631815"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138048,
+            "message": "}",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480919197785228296266658701317731543186402800631816"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138162,
+            "message": "Prompt:  {",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480921740070180928757696836389614625099614482399241"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138162,
+            "message": "  body: '{\"anthropic_version\":\"bedrock-2023-05-31\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"text\",\"text\":\"This is a question from a caller.  In a few sentences provide an answer to this question.\\\\n\\\\nThank you goodbye.\"}]}],\"max_tokens\":4000}',",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480921740070180928757696836389614625099614482399242"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138162,
+            "message": "  modelId: 'us.anthropic.claude-haiku-4-5-20251001-v1:0',",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480921740070180928757696836389614625099614482399243"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138162,
+            "message": "  accept: 'application/json',",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480921740070180928757696836389614625099614482399244"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138162,
+            "message": "  contentType: 'application/json'",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480921740070180928757696836389614625099614482399245"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138162,
+            "message": "}",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480921740070180928757696836389614625099614482399246"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "Bedrock Text:  I’d be happy to help, but I don’t see a question in your message. Could you please share the caller’s question? Once you provide it, I’ll give you a concise answer in a few sentences.",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005007"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "Params for UpdateSipMediaApplicationCall: {",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005008"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "  \"SipMediaApplicationId\": \"17bd43cc-b102-47d8-902d-69d4db65dba6\",",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005009"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "  \"TransactionId\": \"4d1c5f00-c14f-4088-a172-7dfe098345c2\",",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005010"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "  \"Arguments\": {",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005011"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "    \"Function\": \"Response\",",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005012"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "    \"Text\": \"I’d be happy to help, but I don’t see a question in your message. Could you please share the caller’s question? Once you provide it, I’ll give you a concise answer in a few sentences.\"",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005013"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "  }",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005014"
+        },
+        {
+            "logStreamName": "/kvsConsumer/web/d50559e6175446469f2cc0a4b11e77d7",
+            "timestamp": 1788437138897,
+            "message": "}",
+            "ingestionTime": 1788437140243,
+            "eventId": "39883480938131117901848765705865142545021645321378005015"
+        }
+    ],
+    "searchedLogStreams": [],
+    "nextToken": "Bxkq6kVGFtq2y_MoigeqscPOdhXVbhiVtLoAmXb5jCrh_4KsVyhcE6qM93HFijhyTpNL__W_q7OSm8JnG6GrbSU5bzgi3gdCgrhUAOwBVDsAStMEzduCtzcuxhSE08-zAFjTzQdkIfj-yMydSmdm6ouEgcnx44rH-yUqMHIe5e42RIklgNMrpMo0hA2mP5_VRsgCe4fPvBMXaLBs-7w4GsuYUS1Xi9YYHowfxcX4Z06VfhUQreTGPLC0HVSEsCqiDxANnOFXry5DqYW4zcmCpVWkS23oGQFfHhSX6lT22Es9IiT6AGysq7P3lSYrp2eRNvFWNawk2G_MoGoUMRTTiA"
+}
